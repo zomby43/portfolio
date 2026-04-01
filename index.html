@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Patricio Infante — Desarrollador Web Fullstack</title>
+
+  <meta name="description" content="Portfolio de Patricio Infante — Desarrollador Web Fullstack especializado en React, Laravel y AWS." />
+  <meta name="author" content="Patricio Infante" />
+  <meta property="og:title" content="Patricio Infante — Desarrollador Web Fullstack" />
+  <meta property="og:description" content="Ingeniero en Informática especializado en desarrollo web fullstack y cloud computing con React, Laravel y AWS." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Martian+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+  <!-- NAV ================================================== -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Navegación principal">
+    <div class="container nav__inner">
+
+      <a href="#hero" class="nav__logo" aria-label="Patricio Infante">
+        <img src="/src/logo1.svg" alt="PI" class="nav__logo-img" />
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="#about"      data-i18n="nav.about">01 SOBRE</a></li>
+        <li><a href="#projects"   data-i18n="nav.work">02 TRABAJO</a></li>
+        <li><a href="#skills"     data-i18n="nav.skills">03 SKILLS</a></li>
+        <li><a href="#experience" data-i18n="nav.experience">04 TRAYECTORIA</a></li>
+        <li><a href="#contact"    data-i18n="nav.contact">05 CONTACTO</a></li>
+      </ul>
+
+      <button class="nav__lang-toggle font-mono" id="lang-toggle" aria-label="Switch language">ES</button>
+
+      <button class="nav__theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+        <i data-lucide="sun"  class="theme-icon theme-icon--sun"></i>
+        <i data-lucide="moon" class="theme-icon theme-icon--moon"></i>
+      </button>
+
+    </div>
+  </nav>
+
+
+  <main>
+
+    <!-- HERO ================================================ -->
+    <section id="hero" class="section section--hero">
+
+      <div class="container">
+        <div class="hero__inner">
+          <br>
+          <div class="hero__name-row">
+            <svg id="hero-logo" class="hero__logo" aria-hidden="true"
+                 viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+              <path d="M205.1,2.3c39.5,0,78.5,0,117.5,0c15.4,0,23,7.5,23,22.7c0,36.3,0,72.7,0,109c0,13.1-6.2,20.3-19.1,22.3
+                c-13.2,2-16.7,5.5-18.6,18.4c-2,13.3-9,19.3-22.6,19.3c-23.5,0-47.1,0-70.6,0c-13.1,0-19.2,5.6-20.7,18.6
+                c-1.4,11.5-8.2,18.2-19.9,19.5c-12.4,1.4-18.3,7.9-18.3,20.5c0,73.8,0,147.6,0,221.4c0,15.7-7.9,23.7-23.5,23.7
+                c-23.5,0-47.1,0.1-70.6-0.1c-13.4-0.1-22.2-8.7-21.8-21.3c0.3-9.8,7.9-17.9,17.6-18.8c13.4-1.3,18-5.7,20.1-19
+                c1.9-12.3,8.6-18.4,21.1-19.4c9.4-0.7,16.4-7.8,16.8-17.3c0.1-3,0.1-6,0.1-9c0-109.2,0-218.4,0-327.6c0-17.2,5.5-23.4,22.4-25.6
+                c9.2-1.2,14.5-7.3,15.9-18.4c1.6-12.7,8.6-19,21.4-19C185,2.2,194.8,2.3,205.1,2.3 M305.3,84.6c0-7.9,0.1-15.8,0-23.7
+                c-0.2-10.8-7.4-18.2-18-18.3c-25-0.1-50-0.1-75.1,0c-10.4,0-17.1,6.5-18.1,16.9c-1,10.4-6.4,17.8-14.7,20c-2.7,0.7-5.6,0.8-8.3,1.3
+                c-8.8,1.6-15,8.3-15.2,17.1c-0.2,12.8-0.2,25.6,0,38.4c0.2,9.7,7.8,17.4,17.3,17.4c25.6,0.1,51.2,0.1,76.8,0
+                c9.1,0,15.9-6.4,17.2-15.5c0.3-1.9,0.6-3.7,0.9-5.6c1.4-8.4,7.5-14.6,15.9-16.1c2-0.4,4.1-0.6,6.1-0.9c9.2-1.4,15.1-8.2,15.3-17.4
+                C305.4,94,305.3,89.8,305.3,84.6z"/>
+              <path d="M419.4,134.8c2-12.3,10.5-19.6,21.2-18.8c11.4,0.9,19,9.2,19,21.2c0.1,100.3,0.1,200.7,0,301c0,12.7-7.4,20.3-20,21.3
+                c-9.8,0.7-15.9,6.2-17.7,15.9c-0.5,2.8-0.6,5.6-1.4,8.3c-2.6,8.7-10.1,14-20.3,14c-24.7,0.1-49.3,0.2-74-0.1
+                c-11.9-0.1-20.7-8.9-20.9-20.1c-0.2-10.9,7.5-18.8,19.5-20c11.6-1.2,17.9-7.6,18.8-19.4c0.9-10.7,8.1-17.9,18.9-18.9
+                c12.6-1.1,18.5-7.4,18.5-20.1c0-35.8,0-71.5,0-107.3c0-15.6,6-22.4,21.2-24.2c9.6-1.1,17-9,17-18c0-9.3-7.3-16.6-17.3-17.4
+                c-13.1-1.1-20.7-9-20.9-22c-0.1-11.7-0.2-23.3,0-35c0.2-12.3,8-20.5,20.1-21.5C412.4,152.8,418.4,146.7,419.4,134.8z"/>
+              <path d="M275,234c4.8-3.3,9.8-4.6,15.3-4.5c11.5,0.1,23-0.2,34.4,0.1c16.4,0.4,26.1,16.6,18.3,30.3c-3.4,6-8.4,9.4-15.4,9.9
+                c-12.7,0.9-18,6-19.8,18.7c-1.7,12.2-8.5,18.7-20.2,19.6c-11.4,0.9-17.7,7.6-17.7,19.2c0,48.9,0,97.9,0,146.8
+                c0,15.6-8.1,23.7-23.6,23.7c-11.5,0-23,0.2-34.4-0.1c-10.9-0.3-18.8-7.7-20.3-18.4c-1.2-8.7,4.9-17.9,13.9-20.9
+                c1.4-0.5,2.9-0.7,4.4-0.8c13.6-1.2,19.8-8,19.8-21.7c0-31.1,0-62.1,0-93.2c0-17.9,0-35.8,0-53.7c0-12.7,7.2-20.4,19.8-21.3
+                c10.1-0.7,16.5-6.9,17.7-17.1C267.9,244.3,269.4,238.4,275,234z"/>
+              <path d="M383.1,68.3c-4.5-15.6,2.6-26.4,18.3-28.4c11.6-1.4,17.1-7.1,18-18.5c0.9-11.4,9.4-19.3,20.4-19.1
+                c11,0.2,19.5,8.5,19.7,19.8c0.3,12.8,0.3,25.6,0,38.4c-0.2,10.5-7.3,18.5-17.7,19.4c-14.4,1.2-29,1.2-43.4-0.1
+                C391.5,79.2,386.4,75.1,383.1,68.3z"/>
+            </svg>
+            <h1 class="hero__name" aria-label="Patricio Infante">
+              <svg id="hero-name-svg" viewBox="0 0 926.15 224.37" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMinYMid meet">
+                <g class="name-patricio">
+                  <path d="m140.41,28.2s.01.09.01.14l.08,20.58c0,1.09-.07,2.13-.16,3.17-.02.27-.04.54-.07.81-.1,1-.24,1.97-.42,2.91-.04.19-.09.38-.13.57-.64,3.01-1.66,5.74-3.08,8.17-.08.14-.16.29-.24.43-.46.74-.95,1.45-1.49,2.14-.14.18-.29.36-.43.53-2.42,2.95-5.54,5.35-9.38,7.2-.22.1-.43.21-.65.31-.9.41-1.84.8-2.81,1.15-.19.07-.38.13-.57.19-3.2,1.1-6.8,1.9-10.78,2.38-.18.02-.34.05-.52.07-1.26.14-2.55.24-3.89.32-.32.02-.64.04-.96.05-1.37.06-2.76.11-4.21.11h-4.03s-62.46.01-62.46.01l.93,144.91H0V.03h20.77V0h75.92v.03h2.56v.04c13.4-.18,23.62,2.3,30.53,7.34.34.24.64.52.96.78.57.46,1.15.92,1.67,1.42.46.43.87.91,1.29,1.37.33.37.67.72.97,1.1.48.6.9,1.23,1.32,1.87.19.29.39.57.56.86.45.75.84,1.53,1.21,2.33.1.23.22.45.32.68.38.89.7,1.81.99,2.76.05.18.11.35.16.52.29,1.02.52,2.07.71,3.16.02.13.05.26.07.39.18,1.14.31,2.32.39,3.54h0Zm-30.08,16.67c.04-.43.06-.86.06-1.32l-.03-8.55s0-.04,0-.06c-.03-.51-.09-1-.16-1.47-.01-.05-.02-.11-.03-.16-.08-.45-.18-.89-.3-1.31-.02-.08-.05-.15-.07-.22-.12-.39-.25-.78-.41-1.14-.04-.1-.09-.19-.13-.28-.15-.33-.31-.66-.5-.97-.07-.12-.15-.24-.23-.36-.17-.27-.35-.53-.55-.78-.13-.16-.27-.31-.41-.46-.18-.19-.34-.39-.53-.57-.22-.21-.46-.4-.7-.59-.13-.11-.26-.22-.4-.32-2.87-2.1-7.12-3.12-12.68-3.05h0s-4.25,0-4.25,0v-.04h-54.78v33.03h54.78s4.87,0,4.87,0c.6,0,1.18-.02,1.75-.05.13,0,.27-.01.4-.02.55-.04,1.09-.08,1.61-.14.07-.01.14-.02.22-.03,1.65-.2,3.15-.53,4.48-.99.08-.02.16-.05.24-.08.41-.15.8-.31,1.17-.48.09-.04.18-.09.27-.13,1.59-.77,2.9-1.77,3.9-2.99.06-.08.12-.15.18-.22.22-.28.43-.58.62-.89.04-.06.06-.12.1-.18.59-1.01,1.02-2.14,1.28-3.39.02-.08.04-.16.05-.24.08-.4.13-.8.18-1.21.01-.11.02-.23.03-.34h0Z"/>
+                  <path d="m157.07,112.52l-36.22-.02L181.06.03h48.03l60.2,112.46-36.22.02-10.92-20.41h-74.15l-10.93,20.41Zm48-89.65l-24.61,45.98h49.23l-24.61-45.98h0Z"/>
+                  <path d="m259.98,0h140.5v23.22h-53.13v89.3h-34.24V23.22h-53.13V0Z"/>
+                  <path d="m521.66,76.33c-.16.06-.33.11-.49.17l24.16,36-36.22.02-22.18-33.06h-52.67v33.06h-34.24V.04h20.77V.01h75.92v.03h2.56v.04c13.39-.18,23.62,2.3,30.53,7.34.34.24.64.52.96.78.57.46,1.15.92,1.67,1.42.46.43.87.91,1.29,1.37.33.37.67.72.97,1.1.48.6.9,1.23,1.32,1.87.19.29.39.57.56.86.44.75.84,1.53,1.21,2.33.1.23.22.45.32.68.38.89.7,1.81.99,2.76.05.18.11.35.16.52.29,1.02.52,2.07.71,3.16.02.13.05.26.07.39.18,1.14.32,2.32.39,3.54,0,.05.01.09.01.14l.08,20.58c0,1.09-.07,2.13-.16,3.17-.03.27-.04.54-.07.81-.1,1-.24,1.97-.42,2.91-.04.19-.09.38-.13.57-.63,3.01-1.66,5.74-3.08,8.17-.08.14-.16.29-.24.43-.46.74-.96,1.45-1.49,2.14-.14.18-.29.36-.43.53-2.42,2.95-5.54,5.35-9.38,7.2-.21.1-.42.21-.64.31-.9.41-1.84.8-2.81,1.15h0Zm-87.41-53.12v33.03h54.78s4.87,0,4.87,0c.6,0,1.18-.02,1.75-.05.14,0,.27-.01.4-.02.55-.04,1.09-.08,1.61-.14.07-.01.14-.02.22-.03,1.65-.2,3.15-.53,4.48-.99.08-.03.16-.05.24-.08.41-.15.8-.31,1.17-.48.09-.04.18-.09.27-.13,1.59-.77,2.9-1.77,3.9-2.99.06-.08.12-.15.18-.22.22-.28.43-.58.62-.89.04-.06.07-.12.1-.18.59-1.01,1.02-2.14,1.28-3.39.02-.08.04-.16.05-.24.08-.39.13-.8.18-1.21.01-.11.02-.23.03-.34.04-.43.06-.86.06-1.32l-.03-8.55s0-.04,0-.06c-.03-.51-.09-1-.16-1.47-.01-.05-.02-.11-.03-.16-.08-.45-.18-.89-.3-1.31-.02-.08-.05-.15-.07-.22-.12-.39-.25-.78-.41-1.14-.04-.1-.09-.19-.13-.28-.15-.33-.31-.66-.5-.97-.07-.12-.15-.24-.23-.36-.18-.27-.35-.53-.55-.78-.12-.16-.27-.31-.41-.46-.18-.19-.34-.39-.53-.57-.22-.21-.46-.4-.7-.59-.13-.11-.26-.22-.4-.32-2.87-2.1-7.12-3.12-12.68-3.05h0s-4.25,0-4.25,0v-.04h-54.78Z"/>
+                  <path d="m547.75,112.52V.03h34.24v112.49h-34.24Z"/>
+                  <path d="m587.29,72.44l-.11-29.13c.01-1.54.1-3.02.22-4.49.03-.38.06-.77.1-1.14.15-1.41.34-2.79.6-4.13.05-.28.12-.54.18-.81.9-4.27,2.35-8.13,4.36-11.57.12-.2.23-.41.35-.61.64-1.05,1.35-2.06,2.1-3.03.2-.26.4-.51.61-.76,3.42-4.17,7.85-7.57,13.28-10.19.3-.14.6-.29.91-.43,1.28-.58,2.6-1.13,3.98-1.63.27-.1.54-.18.81-.27,4.54-1.56,9.62-2.69,15.26-3.37.25-.03.49-.07.74-.1,1.78-.2,3.62-.35,5.5-.46.44-.03.9-.05,1.35-.07,1.94-.09,3.91-.16,5.95-.16l34.94-.05v.05c18.96-.25,33.44,3.26,43.21,10.41.48.35.9.74,1.36,1.11.81.65,1.63,1.3,2.37,2.01.65.61,1.23,1.28,1.82,1.94.46.52.95,1.01,1.38,1.55.68.84,1.28,1.74,1.87,2.65.27.41.55.81.8,1.23.63,1.06,1.18,2.16,1.7,3.3.15.32.3.64.44.97.54,1.25.99,2.55,1.4,3.9.08.25.16.49.23.74.41,1.44.74,2.93,1.01,4.47.03.18.07.37.1.55.26,1.61.45,3.29.56,5.01,0,.07.02.13.02.2l.02,4.55h-34.55c-.14-.83-.32-1.62-.54-2.38-.04-.13-.08-.26-.12-.4-.22-.71-.46-1.4-.74-2.07-.08-.17-.16-.34-.24-.51-.28-.6-.57-1.19-.9-1.75-.13-.22-.28-.43-.42-.65-.32-.48-.64-.96-.99-1.41-.23-.29-.48-.55-.73-.83-.32-.35-.62-.7-.96-1.03-.39-.37-.83-.72-1.26-1.06-.24-.19-.47-.4-.72-.58-5.18-3.79-12.86-5.64-22.92-5.51v-.03l-20.35.03c-1.08,0-2.13.04-3.16.09-.24.01-.48.02-.72.04-1,.06-1.97.14-2.91.24-.13.01-.26.04-.39.05-2.99.36-5.68.95-8.09,1.78-.14.05-.29.09-.43.14-.73.26-1.43.55-2.11.86-.17.07-.32.15-.48.23-2.88,1.38-5.23,3.19-7.04,5.4-.11.13-.22.27-.32.4-.4.52-.77,1.05-1.12,1.61-.06.11-.12.22-.18.33-1.07,1.83-1.84,3.87-2.31,6.14-.03.14-.06.28-.09.43-.14.71-.24,1.44-.32,2.19-.02.2-.04.4-.05.61-.06.77-.11,1.56-.12,2.38l.06,15.44s.01.07.01.1c.06.92.15,1.8.29,2.66.01.1.03.2.05.29.14.81.32,1.61.54,2.37.04.13.08.26.12.39.22.71.46,1.4.74,2.07.08.17.16.34.24.51.28.6.57,1.19.9,1.75.13.22.28.43.42.65.32.48.64.96.99,1.41.23.28.48.55.73.82.32.35.62.7.97,1.03.39.37.83.72,1.26,1.06.24.19.47.4.72.58,5.19,3.79,12.86,5.64,22.92,5.51h20.35c1.09,0,2.13-.04,3.16-.09.24-.01.48-.02.72-.04,1-.06,1.97-.14,2.91-.24.13-.01.26-.04.39-.05,2.99-.36,5.68-.95,8.09-1.78.14-.05.29-.09.43-.14.74-.26,1.43-.55,2.11-.86.17-.07.32-.15.48-.23,2.88-1.39,5.23-3.19,7.04-5.41.11-.13.22-.27.32-.4.4-.52.77-1.05,1.12-1.61.07-.11.12-.22.18-.33,1.07-1.83,1.84-3.87,2.31-6.14.03-.14.06-.28.09-.43.03-.13.04-.26.06-.39h34.67v1.31c-.01,1.54-.1,3.02-.22,4.49-.03.38-.06.77-.1,1.14-.15,1.41-.34,2.79-.6,4.13-.05.28-.12.54-.18.81-.9,4.27-2.35,8.12-4.36,11.57-.12.2-.23.41-.35.61-.64,1.05-1.35,2.06-2.1,3.03-.19.26-.4.51-.61.76-3.42,4.17-7.85,7.57-13.28,10.19-.3.14-.6.29-.91.43-1.28.58-2.6,1.13-3.98,1.63-.27.1-.54.18-.81.27-4.54,1.56-9.62,2.69-15.26,3.37-.25.03-.49.07-.74.1-1.78.2-3.62.35-5.5.46-.45.03-.9.05-1.35.07-1.94.09-3.91.16-5.96.17h-34.94c-18.96.24-33.44-3.26-43.21-10.4-.48-.35-.9-.74-1.36-1.1-.81-.65-1.63-1.3-2.37-2.01-.65-.61-1.23-1.28-1.82-1.94-.46-.52-.95-1.02-1.38-1.55-.68-.84-1.28-1.74-1.87-2.65-.26-.41-.55-.81-.8-1.23-.63-1.05-1.18-2.16-1.7-3.3-.15-.32-.31-.64-.45-.97-.53-1.25-.99-2.56-1.4-3.9-.07-.25-.15-.49-.23-.74-.41-1.44-.74-2.93-1.01-4.47-.03-.18-.07-.37-.1-.55-.26-1.61-.44-3.29-.56-5.01,0-.07-.02-.13-.02-.2Z"/>
+                  <path d="m740.96,112.52V.03h34.24v112.49h-34.24Z"/>
+                  <path d="m926.02,39.89c0,.07.02.13.02.2l.11,29.13c-.01,1.54-.1,3.02-.22,4.49-.03.38-.06.77-.1,1.15-.15,1.41-.34,2.79-.59,4.13-.05.28-.12.54-.18.81-.9,4.27-2.35,8.12-4.36,11.57-.12.2-.23.41-.35.61-.64,1.05-1.35,2.06-2.1,3.03-.19.26-.4.51-.61.76-3.42,4.17-7.85,7.58-13.28,10.19-.3.14-.6.29-.91.43-1.28.58-2.6,1.13-3.98,1.63-.27.1-.54.18-.81.27-4.54,1.56-9.62,2.69-15.26,3.37-.25.03-.49.07-.74.1-1.78.2-3.62.35-5.5.46-.44.03-.9.05-1.35.07-1.94.09-3.91.16-5.96.17h-31.07c-18.96.24-33.44-3.26-43.21-10.4-.48-.35-.9-.74-1.36-1.1-.81-.65-1.63-1.3-2.37-2.01-.65-.61-1.23-1.28-1.82-1.94-.46-.52-.95-1.02-1.38-1.55-.68-.84-1.28-1.74-1.87-2.65-.26-.41-.55-.81-.8-1.23-.63-1.06-1.18-2.16-1.7-3.3-.15-.32-.31-.64-.45-.97-.53-1.25-.99-2.55-1.4-3.9-.07-.25-.15-.49-.23-.74-.41-1.44-.74-2.93-1.01-4.47-.03-.18-.07-.37-.1-.55-.26-1.61-.44-3.29-.56-5.01,0-.07-.02-.13-.02-.2l-.11-29.13c.01-1.54.1-3.02.22-4.49.03-.38.06-.77.1-1.14.15-1.41.34-2.79.6-4.13.05-.28.12-.54.18-.81.9-4.27,2.35-8.13,4.36-11.57.12-.2.23-.41.35-.61.64-1.05,1.35-2.06,2.1-3.03.2-.26.4-.51.61-.76,3.42-4.17,7.85-7.57,13.28-10.19.3-.14.6-.29.91-.43,1.28-.58,2.6-1.13,3.98-1.63.26-.1.54-.18.81-.27,4.54-1.56,9.62-2.69,15.26-3.37.25-.03.49-.07.74-.1,1.78-.2,3.62-.35,5.5-.46.44-.03.9-.05,1.35-.07,1.94-.09,3.91-.16,5.95-.16l31.07-.05v.05c18.96-.25,33.43,3.26,43.21,10.4.48.35.9.74,1.36,1.1.81.65,1.63,1.3,2.37,2.01.65.61,1.23,1.28,1.82,1.94.46.52.95,1.01,1.38,1.55.68.84,1.28,1.74,1.87,2.65.27.41.55.81.8,1.23.63,1.05,1.18,2.16,1.7,3.3.15.32.31.64.45.97.54,1.25.99,2.55,1.4,3.9.08.25.16.49.23.74.41,1.44.74,2.93,1.01,4.47.03.18.07.37.1.55.26,1.61.45,3.29.56,5.01h0Zm-34.23,25.62c.06-.77.12-1.56.12-2.38l-.06-15.44s-.01-.07-.01-.1c-.06-.92-.15-1.8-.29-2.66-.01-.1-.03-.2-.05-.29-.14-.81-.32-1.61-.54-2.37-.04-.13-.08-.26-.12-.39-.22-.71-.46-1.4-.74-2.07-.08-.17-.16-.34-.24-.51-.28-.6-.57-1.19-.9-1.75-.13-.22-.28-.43-.42-.65-.32-.48-.64-.96-.99-1.41-.23-.29-.48-.55-.73-.83-.32-.35-.62-.7-.96-1.03-.39-.37-.83-.72-1.26-1.06-.24-.19-.47-.4-.72-.58-5.18-3.79-12.86-5.64-22.92-5.51v-.03l-16.47.03c-1.08,0-2.13.04-3.16.09-.24.01-.48.02-.72.04-1,.06-1.97.14-2.91.24-.13.01-.26.04-.39.05-2.99.36-5.68.95-8.09,1.78-.14.05-.29.09-.43.14-.73.26-1.43.55-2.11.86-.17.07-.32.15-.48.23-2.88,1.39-5.23,3.19-7.04,5.4-.11.13-.22.27-.32.4-.4.52-.78,1.05-1.12,1.61-.06.11-.12.22-.18.33-1.07,1.83-1.84,3.87-2.31,6.14-.03.14-.06.28-.09.43-.14.71-.24,1.44-.32,2.19-.02.2-.04.4-.05.61-.06.78-.11,1.56-.12,2.38l.06,15.44s.01.07.01.1c.06.92.15,1.8.29,2.66.01.1.03.2.05.29.14.81.32,1.61.53,2.37.04.13.08.26.12.39.22.71.46,1.4.74,2.07.08.17.16.34.24.51.28.6.57,1.19.9,1.75.13.22.28.43.42.65.32.48.63.96.99,1.41.23.28.48.55.73.82.32.35.62.7.96,1.03.39.37.83.72,1.26,1.06.24.19.47.4.72.58,5.19,3.79,12.86,5.64,22.92,5.51h16.47c1.09,0,2.13-.04,3.16-.09.24-.01.48-.02.72-.04,1-.06,1.97-.14,2.91-.24.13-.01.26-.04.39-.05,2.99-.36,5.68-.95,8.09-1.78.14-.05.29-.09.43-.14.74-.26,1.43-.55,2.11-.86.17-.07.32-.15.48-.23,2.88-1.39,5.23-3.19,7.04-5.41.11-.13.22-.27.32-.4.4-.52.77-1.05,1.12-1.61.07-.11.12-.22.18-.33,1.07-1.83,1.84-3.87,2.31-6.14.03-.14.06-.28.09-.43.14-.71.24-1.44.32-2.19.02-.2.04-.4.05-.61h0Z"/>
+                </g>
+                <g class="name-infante">
+                  <path d="m166.89,111.88h34.24v112.49h-34.24v-.02l-25.39.02-64.64-96.35v96.35h-34.24v-112.49h59.64l64.62,96.32v-96.32Z"/>
+                  <path d="m243.93,224.37h-34.24v-112.49h137.65v23.27h-103.42v21.34h87.62v23.27h-46.8s-40.82,0-40.82,0v44.61Z"/>
+                  <path d="m353.32,224.37l-36.22-.02,60.21-112.46h48.03l60.21,112.46-36.22.02-10.92-20.41h-74.15l-10.93,20.41Zm48-89.65l-24.61,45.98h49.23l-24.61-45.98h0Z"/>
+                  <path d="m607.69,111.88h34.24v112.49h-34.24v-.02l-25.39.02-64.64-96.35v96.35h-34.24v-112.49l61.9.62,62.37,95.7v-96.32Z"/>
+                  <path d="m641.43,111.85h140.5v23.22h-53.13v89.3h-34.24v-89.3h-53.13v-23.22Z"/>
+                  <path d="m781.47,224.37v-112.49h144.68v23.27h-110.45v21.34h87.62v23.27h-46.8s-40.82,0-40.82,0v21.34h110.45v23.27h-144.68Z"/>
+                </g>
+              </svg>
+            </h1>
+          </div>
+
+          <div class="hero__meta">
+            <p class="hero__role">
+              <span class="hero__role-prefix" data-i18n="hero.role_prefix">Ing. en</span>
+              <span class="hero__role-word">Informatica</span>
+            </p>
+
+            <div class="hero__right">
+              <p class="hero__bio" data-i18n="hero.bio">
+                Titulado en Informática y en Sonido. Desarrollo web y produzco audio.
+              </p>
+              <div class="hero__cta">
+                <a href="#projects" class="btn btn--primary"><span data-i18n="hero.cta_work">VER TRABAJO</span> <i data-lucide="arrow-right"></i></a>
+                <a href="#contact"  class="btn btn--ghost"><span data-i18n="hero.cta_contact">CONTACTAR</span> <i data-lucide="mail"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="hero__bar font-mono">
+          <span><i data-lucide="map-pin"></i> <span data-i18n="hero.location">Santiago, Chile</span></span>
+          <span class="hero__bar-sep" aria-hidden="true">·</span>
+          <span data-i18n="hero.availability">Disponible para proyectos</span>
+          <span class="hero__bar-sep" aria-hidden="true">·</span>
+          <a href="mailto:pinfanteogaz@gmail.com"><i data-lucide="mail"></i> pinfanteogaz@gmail.com</a>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- 01 — SOBRE MÍ ====================================== -->
+    <section id="about" class="section">
+      <div class="container">
+
+        <header class="section__header reveal">
+          <span class="section__number font-mono">01</span>
+          <h2 class="section__title" data-i18n="about.title">SOBRE MÍ</h2>
+          <div class="section__rule" aria-hidden="true"></div>
+        </header>
+
+        <div class="about__grid reveal">
+
+          <div class="about__content">
+            <p class="about__bio" data-i18n="about.bio1">
+              Hola! soy Patricio Infante, Ingeniero en Informática (Duoc UC) e Ingeniero en Ejecución en Sonido (IP Santo Tomás).
+            </p>
+            <p class="about__bio" data-i18n="about.bio2">Actualmente trabajo como desarrollador web Full Stack, participando en proyectos para clientes nacionales e internacionales. Me enfoco en crear soluciones eficientes, escalables y con buena experiencia de usuario.</p>
+
+            <p class="about__bio" data-i18n="about.bio3">
+              En mi tiempo libre, disfruto los videojuegos, mis amigos y la música, tanto escuchándola como creándola.
+            </p>
+            <p class="about__bio" data-i18n-html="about.bio4_html">
+              Megafan de <a href="https://draculatheme.com/" target="_blank" rel="noopener" style="color: var(--accent)">Dracula Theme</a> :)
+            </p>
+
+            <ul class="about__facts font-mono">
+              <li>
+                <span class="text-muted" data-i18n="about.label_location">UBICACIÓN</span>
+                <span data-i18n="about.val_location">Santiago, Chile</span>
+              </li>
+              <li>
+                <span class="text-muted" data-i18n="about.label_available">DISPONIBLE</span>
+                <span data-i18n="about.val_available">Para proyectos freelance y posiciones full-time</span>
+              </li>
+              <li>
+                <span class="text-muted" data-i18n="about.label_languages">IDIOMAS</span>
+                <span data-i18n="about.val_languages">Español (nativo) · Inglés B2 Fluido (Hablado y Escrito) · Japonés básico II</span>
+              </li>
+            </ul>
+
+            <div class="about__social">
+              <span class="about__social-label font-mono text-muted" data-i18n="about.social_label">ENCUÉNTRAME EN</span>
+              <div class="about__social-links">
+                <a href="https://github.com/zomby43" target="_blank" rel="noopener" class="about__social-link font-mono">
+                  <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                  GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/patricio-infante-99aaa51b1/" target="_blank" rel="noopener" class="about__social-link font-mono">
+                  <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn
+                </a>
+                <a href="https://bsky.app/profile/z0mb0t.bsky.social" target="_blank" rel="noopener" class="about__social-link font-mono">
+                  <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z"/></svg>
+                  Bluesky
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__aquarium" id="about-aquarium" aria-hidden="true">
+            <div class="work-card__frame">
+              <div class="wf-ul"></div><div class="wf-t"></div><div class="wf-ur"></div>
+              <div class="wf-l"></div><div class="wf-c"></div><div class="wf-r"></div>
+              <div class="wf-dl"></div><div class="wf-b"></div><div class="wf-dr"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 02 — TRABAJO ======================================== -->
+    <section id="projects" class="section">
+      <div class="container">
+
+        <header class="section__header reveal">
+          <span class="section__number font-mono">02</span>
+          <h2 class="section__title" data-i18n="work.title">TRABAJO</h2>
+          <div class="section__rule" aria-hidden="true"></div>
+        </header>
+
+        <div class="work-grid">
+
+          <!-- PROYECTO 1 -->
+          <a class="work-card reveal" href="https://ccrusherr.com" target="_blank" rel="noopener">
+            <div class="work-card__frame" aria-hidden="true">
+              <div class="wf-ul"></div><div class="wf-t"></div><div class="wf-ur"></div>
+              <div class="wf-l"></div><div class="wf-c"></div><div class="wf-r"></div>
+              <div class="wf-dl"></div><div class="wf-b"></div><div class="wf-dr"></div>
+            </div>
+            <div class="work-card__img-wrap">
+              <video src="/src/img/works/crusher.webm" autoplay muted loop playsinline></video>
+            </div>
+            <div class="work-card__body">
+              <div class="work-card__meta">
+                <span class="work-card__num font-mono">P.01</span>
+                <span class="work-card__year font-mono">2025</span>
+              </div>
+              <h3 class="work-card__title">Crusher P</h3>
+              <p class="work-card__desc" data-i18n="work.p01_desc">Sitio web para artista musical estadounidense. Estilo 90's, HTML semántico, diseño responsivo, integración multimedia.</p>
+              <div class="work-card__tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">API's</span>
+              </div>
+              <span class="work-card__cta font-mono"><span data-i18n="work.cta">VER PROYECTO</span> <i data-lucide="arrow-right"></i></span>
+            </div>
+          </a>
+
+          <!-- PROYECTO 2 -->
+          <a class="work-card reveal" href="https://2buildv2.vercel.app/" target="_blank" rel="noopener" data-reveal-delay="60">
+            <div class="work-card__frame" aria-hidden="true">
+              <div class="wf-ul"></div><div class="wf-t"></div><div class="wf-ur"></div>
+              <div class="wf-l"></div><div class="wf-c"></div><div class="wf-r"></div>
+              <div class="wf-dl"></div><div class="wf-b"></div><div class="wf-dr"></div>
+            </div>
+            <div class="work-card__img-wrap">
+              <video src="/src/img/works/2build.webm" autoplay muted loop playsinline></video>
+            </div>
+            <div class="work-card__body">
+              <div class="work-card__meta">
+                <span class="work-card__num font-mono">P.02</span>
+                <span class="work-card__year font-mono">2024</span>
+              </div>
+              <h3 class="work-card__title">2Build</h3>
+              <p class="work-card__desc" data-i18n="work.p02_desc">Sitio corporativo para consultora de Data Centers. Logo, estructura informativa y rendimiento inferior a 2s.</p>
+              <div class="work-card__tags">
+                <span class="tag">Next.JS</span>
+                <span class="tag">React</span>
+                <span class="tag">Performance</span>
+                <span class="tag">Diseño UI</span>
+              </div>
+              <span class="work-card__cta font-mono"><span data-i18n="work.cta">VER PROYECTO</span> <i data-lucide="arrow-right"></i></span>
+            </div>
+          </a>
+
+          <!-- PROYECTO 3 -->
+          <a class="work-card reveal" href="https://bijoutique.art" target="_blank" rel="noopener" data-reveal-delay="120">
+            <div class="work-card__frame" aria-hidden="true">
+              <div class="wf-ul"></div><div class="wf-t"></div><div class="wf-ur"></div>
+              <div class="wf-l"></div><div class="wf-c"></div><div class="wf-r"></div>
+              <div class="wf-dl"></div><div class="wf-b"></div><div class="wf-dr"></div>
+            </div>
+            <div class="work-card__img-wrap">
+              <video src="/src/img/works/bijoutique.webm" autoplay muted loop playsinline></video>
+            </div>
+            <div class="work-card__body">
+              <div class="work-card__meta">
+                <span class="work-card__num font-mono">P.03</span>
+                <span class="work-card__year font-mono">2026</span>
+              </div>
+              <h3 class="work-card__title">Bijoutique</h3>
+              <p class="work-card__desc" data-i18n="work.p03_desc">Portfolio para artista 3D. UI design, optimización de assets gráficos y despliegue. Construido con Vite.</p>
+              <div class="work-card__tags">
+                <span class="tag">Vite</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">UI Design</span>
+                <span class="tag">GSAP</span>
+              </div>
+              <span class="work-card__cta font-mono"><span data-i18n="work.cta">VER PROYECTO</span> <i data-lucide="arrow-right"></i></span>
+            </div>
+          </a>
+
+          <!-- PROYECTO 4 -->
+          <a class="work-card reveal" href="https://zombot.net" target="_blank" rel="noopener" data-reveal-delay="180">
+            <div class="work-card__frame" aria-hidden="true">
+              <div class="wf-ul"></div><div class="wf-t"></div><div class="wf-ur"></div>
+              <div class="wf-l"></div><div class="wf-c"></div><div class="wf-r"></div>
+              <div class="wf-dl"></div><div class="wf-b"></div><div class="wf-dr"></div>
+            </div>
+            <div class="work-card__img-wrap">
+              <video src="/src/img/works/zombot.webm" autoplay muted loop playsinline></video>
+            </div>
+            <div class="work-card__body">
+              <div class="work-card__meta">
+                <span class="work-card__num font-mono">P.04</span>
+                <span class="work-card__year font-mono">2025 - 2026</span>
+              </div>
+              <h3 class="work-card__title">Zombot.net</h3>
+              <p class="work-card__desc" data-i18n="work.p04_desc">Sitio web personal estilo 90's. Diseño y desarrollo propio en HTML, CSS y JavaScript.</p>
+              <div class="work-card__tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">3D</span>
+                <span class="tag">API'S</span>
+              </div>
+              <span class="work-card__cta font-mono"><span data-i18n="work.cta">VER PROYECTO</span> <i data-lucide="arrow-right"></i></span>
+            </div>
+          </a>
+
+          <!-- PROYECTO 5 — ✏️ agrega más proyectos aquí -->
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 03 — SKILLS ========================================= -->
+    <section id="skills" class="section">
+      <div class="container">
+
+        <header class="section__header reveal">
+          <span class="section__number font-mono">03</span>
+          <h2 class="section__title" data-i18n="skills.title">SKILLS</h2>
+          <div class="section__rule" aria-hidden="true"></div>
+        </header>
+
+        <div class="skills__list">
+
+          <div class="skills__category reveal">
+            <span class="skills__label font-mono">FRONTEND</span>
+            <div class="skills__tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">React</span>
+              <span class="tag">Vite</span>
+              <span class="tag">GSAP</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">Bootstrap</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">WordPress</span>
+            </div>
+          </div>
+
+          <div class="skills__category reveal" data-reveal-delay="60">
+            <span class="skills__label font-mono">BACKEND</span>
+            <div class="skills__tags">
+              <span class="tag">Laravel</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Django</span>
+              <span class="tag">Flask</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">API REST</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">PostgreSQL</span>
+            </div>
+          </div>
+
+          <div class="skills__category reveal" data-reveal-delay="120">
+            <span class="skills__label font-mono">CLOUD</span>
+            <div class="skills__tags">
+              <span class="tag">AWS</span>
+              <span class="tag">Vercel</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">ETL</span>
+            </div>
+          </div>
+
+          <div class="skills__category reveal" data-reveal-delay="180">
+            <span class="skills__label font-mono" data-i18n="skills.cat_sound">SONIDO</span>
+            <div class="skills__tags">
+              <span class="tag" data-i18n="skills.tag_recording">Grabación</span>
+              <span class="tag" data-i18n="skills.tag_mixing">Mezcla</span>
+              <span class="tag" data-i18n="skills.tag_mastering">Masterización</span>
+              <span class="tag">Pro Tools</span>
+              <span class="tag">FL Studio</span>
+              <span class="tag">Reaper</span>
+              <span class="tag" data-i18n="skills.tag_production">Producción Musical</span>
+              <span class="tag" data-i18n="skills.tag_mic">Microfonía</span>
+            </div>
+          </div>
+
+          <div class="skills__category reveal" data-reveal-delay="240">
+            <span class="skills__label font-mono" data-i18n="skills.cat_tools">HERRAMIENTAS</span>
+            <div class="skills__tags">
+              <span class="tag">Git</span>
+              <span class="tag">Scrum</span>
+              <span class="tag">Photoshop</span>
+              <span class="tag">Illustrator</span>
+              <span class="tag">Premiere</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 04 — TRAYECTORIA ==================================== -->
+    <section id="experience" class="section">
+      <div class="container">
+
+        <header class="section__header reveal">
+          <span class="section__number font-mono">04</span>
+          <h2 class="section__title" data-i18n="exp.title">TRAYECTORIA</h2>
+          <div class="section__rule" aria-hidden="true"></div>
+        </header>
+
+        <div class="exp-list">
+
+          <div class="exp-item reveal">
+            <div class="exp-item__left">
+              <span class="exp-item__period font-mono" data-i18n="exp.1_period">Ago. 2025 — Nov. 2025</span>
+              <span class="exp-star" aria-hidden="true">✱</span>
+            </div>
+            <div class="exp-item__content">
+              <h3 class="exp-item__company">DYATEC</h3>
+              <p class="exp-item__role" data-i18n="exp.1_role">Desarrollador Web — Práctica Profesional · Santiago, Chile (Remoto)</p>
+              <p class="exp-item__desc" data-i18n="exp.1_desc">Implementé funcionalidades personalizadas y optimicé el rendimiento de plataformas web con WordPress y Laravel, reduciendo tiempos de carga y mejorando la experiencia de usuario.</p>
+            </div>
+          </div>
+
+          <div class="exp-item reveal" data-reveal-delay="80">
+            <div class="exp-item__left">
+              <span class="exp-item__period font-mono" data-i18n="exp.2_period">Nov. 2024 — Presente</span>
+              <span class="exp-star" aria-hidden="true">✱</span>
+            </div>
+            <div class="exp-item__content">
+              <h3 class="exp-item__company">Freelance</h3>
+              <p class="exp-item__role" data-i18n="exp.2_role">Desarrollador Web · Santiago, Chile</p>
+              <p class="exp-item__desc" data-i18n="exp.2_desc">Diseño y desarrollo de sitios para clientes nacionales e internacionales — Crusher-P, 2Build y Bijoutique. Gestión integral de cada proyecto: levantamiento de requerimientos, desarrollo iterativo, QA y entrega al cliente.</p>
+            </div>
+          </div>
+
+          <div class="exp-item reveal" data-reveal-delay="160">
+            <div class="exp-item__left">
+              <span class="exp-item__period font-mono" data-i18n="exp.3_period">Sep. 2018 — Nov. 2018</span>
+              <span class="exp-star" aria-hidden="true">✱</span>
+            </div>
+            <div class="exp-item__content">
+              <h3 class="exp-item__company">Santuario Sónico</h3>
+              <p class="exp-item__role" data-i18n="exp.3_role">Asistente de Producción y Sonido — Práctica Profesional · Santiago, Chile</p>
+              <p class="exp-item__desc" data-i18n="exp.3_desc">Asistencia en grabación, mezcla y masterización de audio en estudio profesional. Montaje y configuración de microfonía e instrumentos para sesiones con artistas de nivel nacional.</p>
+            </div>
+          </div>
+
+          <div class="exp-item reveal" data-reveal-delay="240">
+            <div class="exp-item__left">
+              <span class="exp-item__period font-mono" data-i18n="exp.4_period">2016 — 2020</span>
+              <span class="exp-star" aria-hidden="true">✱</span>
+            </div>
+            <div class="exp-item__content">
+              <h3 class="exp-item__company">Agencia de Publicidad Trimage</h3>
+              <p class="exp-item__role" data-i18n="exp.4_role">Editor de Imágenes · Santiago, Chile</p>
+              <p class="exp-item__desc" data-i18n="exp.4_desc">Edición y retoque fotográfico para campañas publicitarias utilizando Adobe Photoshop e Illustrator.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 05 — CONTACTO ======================================= -->
+    <section id="contact" class="section">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__number font-mono">05</span>
+          <h2 class="section__title" data-i18n="contact.title">CONTACTO</h2>
+          <div class="section__rule" aria-hidden="true"></div>
+        </header>
+      </div>
+
+      <!-- Marquee full-width -->
+      <div class="contact__marquee-wrap" aria-hidden="true">
+        <div class="contact__marquee-track">
+          <!-- 6 repeticiones para loop seamless -->
+          <span class="contact__marquee-unit">LET'S WORK <img src="/src/img/metax.svg" class="contact__marquee-icon" alt=""> TOGETHER.</span>
+          <span class="contact__marquee-unit">LET'S WORK <img src="/src/img/metax.svg" class="contact__marquee-icon" alt=""> TOGETHER.</span>
+          <span class="contact__marquee-unit">LET'S WORK <img src="/src/img/metax.svg" class="contact__marquee-icon" alt=""> TOGETHER.</span>
+          <span class="contact__marquee-unit">LET'S WORK <img src="/src/img/metax.svg" class="contact__marquee-icon" alt=""> TOGETHER.</span>
+          <span class="contact__marquee-unit">LET'S WORK <img src="/src/img/metax.svg" class="contact__marquee-icon" alt=""> TOGETHER.</span>
+          <span class="contact__marquee-unit">LET'S WORK <img src="/src/img/metax.svg" class="contact__marquee-icon" alt=""> TOGETHER.</span>
+          <span class="contact__marquee-unit">LET'S WORK <img src="/src/img/metax.svg" class="contact__marquee-icon" alt=""> TOGETHER.</span>
+          <span class="contact__marquee-unit">LET'S WORK <img src="/src/img/metax.svg" class="contact__marquee-icon" alt=""> TOGETHER.</span>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="contact__body reveal" data-reveal-delay="80">
+
+          <a href="mailto:pinfanteogaz@gmail.com" class="contact__email font-mono">
+            <i data-lucide="mail"></i> pinfanteogaz@gmail.com
+          </a>
+
+          <div class="contact__links">
+            <a href="https://www.linkedin.com/in/patricio-infante-99aaa51b1/" target="_blank" rel="noopener" class="about__social-link font-mono">
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com/zomby43" target="_blank" rel="noopener" class="about__social-link font-mono">
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+          </div>
+
+          <div class="contact__status">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span class="font-mono" data-i18n="contact.availability">Disponible para proyectos freelance y posiciones full-time</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER =============================================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="font-mono text-muted">Patricio Infante</span>
+      <span class="font-mono text-muted" data-i18n="footer.built">BUILT WITH VITE — 2026</span>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+
+</body>
+</html>

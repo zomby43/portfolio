@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'NuCore Condensed';
+    src: url('NuCoreCondensed.woff2') format('woff2'),
+        url('NuCoreCondensed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
