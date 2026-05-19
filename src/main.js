@@ -1,6 +1,6 @@
 /* ============================================================
    PORTFOLIO — main.js
-   Módulos: hero GSAP | cursor | scroll reveal | nav | scroll
+   Módulos: hero GSAP | scroll reveal | nav | scroll
    ============================================================ */
 
 import gsap from 'gsap';
@@ -107,54 +107,6 @@ function initRoleScramble() {
   /* Reiniciar cuando cambia el idioma */
   window.addEventListener('langchange', (e) => {
     startCycle(roleWords[e.detail.lang]);
-  });
-}
-
-function initCustomCursor() {
-  if (!window.matchMedia('(hover: hover)').matches) return;
-
-  const dot  = document.createElement('div');
-  const ring = document.createElement('div');
-  dot.className  = 'cursor-dot';
-  ring.className = 'cursor-ring';
-  document.body.appendChild(dot);
-  document.body.appendChild(ring);
-
-  let mouseX = 0, mouseY = 0;
-  let ringX  = 0, ringY  = 0;
-
-  document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    dot.style.left = mouseX + 'px';
-    dot.style.top  = mouseY + 'px';
-  });
-
-  function animateRing() {
-    const lerpFactor = 0.12;
-    ringX += (mouseX - ringX) * lerpFactor;
-    ringY += (mouseY - ringY) * lerpFactor;
-    ring.style.left = ringX + 'px';
-    ring.style.top  = ringY + 'px';
-    requestAnimationFrame(animateRing);
-  }
-  animateRing();
-
-  const interactables = 'a, button, [data-cursor-hover]';
-  document.addEventListener('mouseover', (e) => {
-    if (e.target.closest(interactables)) document.body.classList.add('cursor-hover');
-  });
-  document.addEventListener('mouseout', (e) => {
-    if (e.target.closest(interactables)) document.body.classList.remove('cursor-hover');
-  });
-
-  document.addEventListener('mouseleave', () => {
-    dot.style.opacity  = '0';
-    ring.style.opacity = '0';
-  });
-  document.addEventListener('mouseenter', () => {
-    dot.style.opacity  = '1';
-    ring.style.opacity = '0.45';
   });
 }
 
@@ -776,7 +728,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initMasonry();
   initHeroAnimation();
   initRoleScramble();
-  initCustomCursor();
   initScrollReveal();
   initScrambleHeaders();
   initNavScroll();

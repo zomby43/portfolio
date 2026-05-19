@@ -8,11 +8,11 @@
 export const translations = {
   es: {
     /* Nav */
-    'nav.about':      '01 SOBRE',
-    'nav.work':       '02 TRABAJO',
-    'nav.skills':     '03 SKILLS',
-    'nav.experience': '04 TRAYECTORIA',
-    'nav.contact':    '05 CONTACTO',
+    'nav.about':      'SOBRE',
+    'nav.work':       'TRABAJO',
+    'nav.skills':     'SKILLS',
+    'nav.experience': 'TRAYECTORIA',
+    'nav.contact':    'CONTACTO',
 
     /* Hero */
     'hero.role_prefix':  'Ing. en',
@@ -73,16 +73,16 @@ export const translations = {
     'contact.availability': 'Disponible para proyectos freelance y posiciones full-time',
 
     /* Footer */
-    'footer.built': 'BUILT WITH VITE — 2026',
+    'footer.built': 'Hecho con Vite, 2026',
   },
 
   en: {
     /* Nav */
-    'nav.about':      '01 ABOUT',
-    'nav.work':       '02 WORK',
-    'nav.skills':     '03 SKILLS',
-    'nav.experience': '04 EXPERIENCE',
-    'nav.contact':    '05 CONTACT',
+    'nav.about':      'ABOUT',
+    'nav.work':       'WORK',
+    'nav.skills':     'SKILLS',
+    'nav.experience': 'EXPERIENCE',
+    'nav.contact':    'CONTACT',
 
     /* Hero */
     'hero.role_prefix':  'Eng. in',
@@ -143,7 +143,7 @@ export const translations = {
     'contact.availability': 'Available for freelance projects and full-time positions',
 
     /* Footer */
-    'footer.built': 'BUILT WITH VITE — 2026',
+    'footer.built': 'Built with Vite, 2026',
   },
 };
 
